@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  padding: 0;
+  margin: 0;
+  /* background-image: linear-gradient(to right, #BB8A52, #FFBA00,#BB8A52,#FFBA00,#BB8A52); */
+  background-color: #609773;
+  /* background-image: url(myPhot.jpg); */
+  /* background-image: contain; */
+  
+  
+}
+
+html{
+  scroll-behavior: smooth;
+}
