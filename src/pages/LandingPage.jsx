@@ -16,7 +16,7 @@ function LandingPage() {
         id="home"
         className="flex w-full h-screen justify-center items-center md:py-12 py-4 overflow-hidden md:px-0 px-2 relative"
       >
-        <div className="bg-bgColor w-full md:w-[80%] md:h-[85vh] h-[90vh]  shadow-2xl flex flex-col justify-center md:pt-12 pt-6 overflow-hidden">
+        <div className="bg-bgColor w-full md:w-[80%] md:h-[85vh] h-auto  shadow-2xl flex flex-col justify-center md:pt-12 pt-6 overflow-hidden">
           <div className="flex justify-center md:h-[10%] pb-8 md:pb-0">
             <Navbar />
           </div>
@@ -126,7 +126,7 @@ function LandingPage() {
 
           {/* Landing page  for mobile view  */}
 
-          <div className="md:hidden w-full h-screen bg-custom-image bg-no-repeat bg-top bg-contain ">
+          <div className="md:hidden w-full h-auto bg-custom-image bg-no-repeat bg-top bg-contain ">
             <div className="h-full    font-myFont text-white overflow-hidden ">
               <div className="mt-64 bg-black bg-opacity-50 shadow-xl  px-6 py-2">
                 <p className="font-myFont text-colorThree text-xl font-bold ">
@@ -156,12 +156,12 @@ function LandingPage() {
                   bring creativity and <br /> functionality together in perfect
                   harmony. Let's build the future, one line of code at a time.
                 </p>
-                <div className=" pt-44 flex justify-end text-black">
+                <div className=" pt-44 flex justify-end text-black ">
                   <a href="#projects">
                     <Button
                       color="primary"
                       variant="ghost"
-                      className="bg-colorThree rounded-md px-8 mr-4"
+                      className="bg-colorThree rounded-md px-8 ml-2"
                     >
                       Explore projects
                     </Button>
@@ -173,7 +173,7 @@ function LandingPage() {
                     <Button
                       color="primary"
                       variant="ghost"
-                      className="bg-colorThree rounded-md px-8"
+                      className="bg-colorThree rounded-md px-8 ml-2"
                     >
                       View Resume
                     </Button>
