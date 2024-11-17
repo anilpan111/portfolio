@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
-import { Button, Card, Image, CardFooter } from "@nextui-org/react";
+import { Button, Card, Image, CardFooter, Tooltip } from "@nextui-org/react";
 
 function LandingPage() {
   return (
@@ -57,7 +57,6 @@ function LandingPage() {
                 <div className=" pt-32 flex justify-end text-black">
                   <a href="#projects">
                     <Button
-                      color="primary"
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 mr-4 border-2"
                     >
@@ -65,11 +64,10 @@ function LandingPage() {
                     </Button>
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/19fFXs0AMD9qYCPGgrxjmffuNRyWl7Wx9/view?  usp=sharing"
+                    href="https://drive.google.com/file/d/1KVQcskdahqOV_ztWYgjX_61Dst7wOhoK/view?usp=sharing"
                     target="_blank"
                   >
                     <Button
-                      color="primary"
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 border-2"
                     >
@@ -90,36 +88,59 @@ function LandingPage() {
             </div>
             <div className="max-w-[5%] h-full flex py-12">
               <ul className="flex flex-col justify-around items-center text-colorFour cursor-pointer">
-                <li className="hover:text-colorThree">
-                  <a
-                    href="https://www.linkedin.com/in/anil-pan-112926220/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLinkedin size={25} className="" />
-                  </a>
-                </li>
-                <li className="hover:text-colorThree">
-                  <a
-                    href="https://github.com/anilpan111"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub size={25} />
-                  </a>
-                </li>
-                <li className="hover:text-colorThree">
-                  <SiGmail size={25} />
-                </li>
-                <li className="hover:text-colorThree">
-                  <a
-                    href="https://www.instagram.com/anill.fr?igsh=MXU5MWF6bjF4aTN2eA=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram size={25} />
-                  </a>
-                </li>
+                <Tooltip
+                  content="Linkedin/anilpan"
+                  className="bg-background dark text-white"
+                >
+                  <li className="hover:text-colorThree">
+                    <a
+                      href="https://www.linkedin.com/in/anil-pan-112926220/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin size={25} className="" />
+                    </a>
+                  </li>
+                </Tooltip>
+
+                <Tooltip
+                  content="github/anilpan111"
+                  className="bg-background dark text-white"
+                >
+                  <li className="hover:text-colorThree">
+                    <a
+                      href="https://github.com/anilpan111"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub size={25} />
+                    </a>
+                  </li>
+                </Tooltip>
+
+                <Tooltip
+                  content="@anilpan336@gmail.com"
+                  className="bg-background dark text-white"
+                >
+                  <li className="hover:text-colorThree">
+                    <SiGmail size={25} />
+                  </li>
+                </Tooltip>
+
+                <Tooltip
+                  content="@anill.fr"
+                  className="bg-background dark text-white"
+                >
+                  <li className="hover:text-colorThree">
+                    <a
+                      href="https://www.instagram.com/anill.fr?igsh=MXU5MWF6bjF4aTN2eA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram size={25} />
+                    </a>
+                  </li>
+                </Tooltip>
               </ul>
             </div>
           </div>
@@ -228,7 +249,7 @@ function LandingPage() {
         <div className="md:w-[30%]  h-full">
           <div className="w-full justify-center flex md:mt-16">
             <img
-              src="/pic2.jpeg"
+              src="/myPhoto3.jpg"
               alt="profile"
               className="w-64 h-64 object-cover rounded-full cursor-pointer hover:w-80 hover:h-80 ease-in-out duration-500 border-1 hover:border-8 border-black "
             />
@@ -244,14 +265,13 @@ function LandingPage() {
         </div>
         <div className="md:w-[70%] h-auto  text-colorEight grid md:grid-cols-3 grid-cols-1">
           <div className=" mx-8 mt-16 md:mb-24 rounded-sm bg-black/50 backdrop-blur-xl text-center py-12 px-2 shadow-2xl hover:mx-4 ease-in-out duration-500 ">
-            <span className="text-2xl font-bold">Hii, i'm Anil </span> and i
-            am from a very beautiful and culturaly rich state Jharkhand.
-            Recently i have completed my masters degree from SOA, ITER
-            Bhubaneswar in Computer Application. I have done my BCA degree from
-            Trident Academy of technology Bhubaneswar. I am very good at
-            programming and problem solving and my goal is to become an
-            established engineer in the field of computer science. Thats all
-            about myself.
+            <span className="text-2xl font-bold">Hii, i'm Anil </span> and i am
+            from a very beautiful and culturaly rich state Jharkhand. Recently i
+            have completed my masters degree from SOA, ITER Bhubaneswar in
+            Computer Application. I have done my BCA degree from Trident Academy
+            of technology Bhubaneswar. I am very good at programming and problem
+            solving and my goal is to become an established engineer in the
+            field of computer science. Thats all about myself.
           </div>
           <div className="bg-black/50 backdrop-blur-xl  mx-8 md:mt-32 mt-14 md:mb-12 text-center py-12 px-2 hover:mx-4 ease-in-out duration-500">
             I’m a passionate full-stack developer with expertise in the MERN
