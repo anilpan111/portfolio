@@ -5,9 +5,22 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
-import { Button, Card, Image, CardFooter, Tooltip } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  Image,
+  CardFooter,
+  Tooltip,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/react";
 
 function LandingPage() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <>
       <div className="w-[50%] h-screen rounded-full bg-colorFour absolute left-[-20%] z-0 scroll-smooth"></div>
@@ -63,17 +76,37 @@ function LandingPage() {
                       Explore projects
                     </Button>
                   </a>
-                  <a
-                    href="https://drive.google.com/file/d/1KVQcskdahqOV_ztWYgjX_61Dst7wOhoK/view?usp=sharing"
-                    target="_blank"
+
+                  <Button onPress={onOpen}
+                    variant="ghost"
+                    className="bg-colorThree rounded-md px-8 border-2"
                   >
-                    <Button
-                      variant="ghost"
-                      className="bg-colorThree rounded-md px-8 border-2"
-                    >
-                      View Resume
-                    </Button>
-                  </a>
+                    View Resume
+                  </Button>
+
+                  {/* <Button >Open Modal</Button> */}
+                  <Modal
+                    isOpen={isOpen}
+                    onOpenChange={onOpenChange}
+                    isDismissable={false}
+                    isKeyboardDismissDisabled={true}
+                    
+                  >
+                    <ModalContent >
+                      {(onClose) => (
+                        <>
+                          <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+                          
+                          <ModalFooter>
+                            
+                            <Button color="danger" onPress={onClose}>
+                              Close
+                            </Button>
+                          </ModalFooter>
+                        </>
+                      )}
+                    </ModalContent>
+                  </Modal>
                 </div>
               </div>
             </div>
@@ -525,6 +558,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
+
     </>
   );
 }
