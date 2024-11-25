@@ -113,7 +113,7 @@ function LandingPage() {
             <div className="h-full md:w-[45%] flex justify-center items-center pr-8 ">
               <div>
                 <img
-                  src="/myPhoto.png"
+                  src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732518797/Mannual%20uploads/aedgarjad2cbtykul5jb.png"
                   alt="Anil Pan"
                   className=" md:h-[30rem] md:w-[24rem]"
                 />
@@ -212,8 +212,7 @@ function LandingPage() {
                 </p>
                 <div className=" pt-44 flex justify-end text-black ">
                   <a href="#projects">
-                    <Button
-                      color="primary"
+                    <Button 
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 ml-2"
                     >
@@ -221,11 +220,10 @@ function LandingPage() {
                     </Button>
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/19fFXs0AMD9qYCPGgrxjmffuNRyWl7Wx9/view?  usp=sharing"
+                    href="https://drive.google.com/file/d/1KVQcskdahqOV_ztWYgjX_61Dst7wOhoK/view?usp=sharing"
                     target="_blank"
                   >
-                    <Button
-                      color="primary"
+                    <Button  
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 ml-2"
                     >
@@ -282,9 +280,9 @@ function LandingPage() {
         <div className="md:w-[30%]  h-full">
           <div className="w-full justify-center flex md:mt-16">
             <img
-              src="/myPhoto3.jpg"
+              src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732518964/Mannual%20uploads/dz3qakdcq9shsolhzrca.jpg"
               alt="profile"
-              className="w-64 h-64 object-cover rounded-full cursor-pointer hover:w-80 hover:h-80 ease-in-out duration-500 border-1 hover:border-8 border-black "
+              className="w-64 h-64 object-cover rounded-full cursor-pointer hover:w-80 hover:h-80 ease-in-out duration-500 border-2 hover:border-8 border-black "
             />
           </div>
           <div className="text-center font-myFont mt-4 text-colorEight">
@@ -342,6 +340,45 @@ function LandingPage() {
         </h1>
         <div className="max-h-[90%] w-full md:px-12 py-2">
           <ul className="grid md:grid-cols-3 grid-cols-1">
+          <li className=" w-full ">
+              <div className="bg-colorTen m-8 rounded-xl">
+                <div className="flex justify-center w-full pt-2">
+                  <Card
+                    isFooterBlurred
+                    radius="lg"
+                    className="border-none  h-96 w-72"
+                  >
+                    <Image
+                      alt="FairShare cover image"
+                      className="object-fill h-96 w-72 rounded-lg"
+                      // height={200}
+                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732519058/Mannual%20uploads/w8j5lwja4qcj2f3rfj0c.png"
+                      // width={200}
+                    />
+                    <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                      <p className="text-tiny text-white/80">FairShare</p>
+                      <a
+                        href="https://fairsharebyanil.netlify.app/"
+                        target="blank"
+                      >
+                        <Button
+                          className="text-tiny text-white bg-black/20 rounded-lg"
+                          variant="flat"
+                          color="default"
+                          radius="lg"
+                          size="lg"
+                        >
+                          View
+                        </Button>
+                      </a>
+                    </CardFooter>
+                  </Card>
+                </div>
+                <p className="text-sm text-center mt-4 px-4 pb-2 bg-black opacity-50 text-white">
+                  <span className="font-bold text-xl">FairShare</span> is a web app designed to help users manage shared expenses within groups. It allows users to create groups, input expenses, and automatically calculate and distribute costs fairly among members. The platform promotes financial transparency and simplifies the process of managing group finances, making it easy to track and settle expenses.
+                </p>
+              </div>
+            </li>
             <li className=" w-full ">
               <div className="bg-colorTen m-8 rounded-xl">
                 <div className="flex justify-center w-full pt-2">
@@ -354,7 +391,7 @@ function LandingPage() {
                       alt="Woman listing to music"
                       className="object-fill h-96 w-72 rounded-lg"
                       // height={200}
-                      src="https://images.pexels.com/photos/3612707/pexels-photo-3612707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732518603/Mannual%20uploads/iioy2kcwqulkllrnyvte.png"
                       // width={200}
                     />
                     <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -399,20 +436,25 @@ function LandingPage() {
                       alt="Woman listing to music"
                       className="object-fill h-96 w-72 rounded-lg"
                       // height={200}
-                      src="https://images.pexels.com/photos/7703268/pexels-photo-7703268.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732519117/Mannual%20uploads/b0p8s6fpmiwdwwfx8eey.png"
                       // width={200}
                     />
                     <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                       <p className="text-tiny text-white/80">Time Tracer</p>
-                      <Button
-                        className="text-tiny text-white bg-black/20 rounded-lg"
-                        variant="flat"
-                        color="default"
-                        radius="lg"
-                        size="lg"
+                      <a
+                        href="https://timetraceranil.netlify.app/"
+                        target="blank"
                       >
-                        View
-                      </Button>
+                        <Button
+                          className="text-tiny text-white bg-black/20 rounded-lg"
+                          variant="flat"
+                          color="default"
+                          radius="lg"
+                          size="lg"
+                        >
+                          View
+                        </Button>
+                      </a>
                     </CardFooter>
                   </Card>
                 </div>
@@ -426,45 +468,7 @@ function LandingPage() {
                 </p>
               </div>
             </li>
-            <li className=" w-full ">
-              <div className="bg-colorTen m-8 rounded-xl">
-                <div className="flex justify-center w-full pt-2">
-                  <Card
-                    isFooterBlurred
-                    radius="lg"
-                    className="border-none  h-96 w-72"
-                  >
-                    <Image
-                      alt="Woman listing to music"
-                      className="object-fill h-96 w-72 rounded-lg"
-                      // height={200}
-                      src="https://images.pexels.com/photos/415078/pexels-photo-415078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                      // width={200}
-                    />
-                    <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny text-white/80">Bookish Haven</p>
-                      <Button
-                        className="text-tiny text-white bg-black/20 rounded-lg"
-                        variant="flat"
-                        color="default"
-                        radius="lg"
-                        size="lg"
-                      >
-                        View
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </div>
-                <p className="text-sm text-center mt-4 px-4 pb-2 bg-black opacity-50 text-white">
-                  <span className="font-bold text-xl">Bookish Haven</span> is an
-                  online bookstore built with the MERN stack, offering a
-                  seamless experience for book lovers. With a responsive React
-                  frontend, Node.js and Express backend, and MongoDB for data
-                  management, users can explore, purchase, and manage books
-                  effortlessly.
-                </p>
-              </div>
-            </li>
+            
           </ul>
         </div>
       </div>
