@@ -30,7 +30,7 @@ export default {
         colorEleven: '#57737E'
       },
       backgroundImage: {
-        'custom-image': "url('/myPhoto.png')"
+        'custom-image': "url('https://res.cloudinary.com/anilpancloud123/image/upload/v1732518797/Mannual%20uploads/aedgarjad2cbtykul5jb.png')"
     },
     boxShadow: {
       'custom-light': '0 4px 6px rgba(0, 0, 0, 0.1)',
