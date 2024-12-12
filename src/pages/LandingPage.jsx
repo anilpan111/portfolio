@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
@@ -21,6 +21,9 @@ import {
 
 function LandingPage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isHover, setIsHover] = useState(false);
+  const [isHover2, setIsHover2] = useState(false);
+  const [isHover3, setIsHover3] = useState(false);
   return (
     <>
       <div className="w-[50%] h-screen rounded-full bg-colorFour absolute left-[-20%] z-0 scroll-smooth"></div>
@@ -77,7 +80,8 @@ function LandingPage() {
                     </Button>
                   </a>
 
-                  <Button onPress={onOpen}
+                  <Button
+                    onPress={onOpen}
                     variant="ghost"
                     className="bg-colorThree rounded-md px-8 border-2"
                   >
@@ -90,15 +94,17 @@ function LandingPage() {
                     onOpenChange={onOpenChange}
                     isDismissable={false}
                     isKeyboardDismissDisabled={true}
-                    
                   >
-                    <ModalContent >
+                    <ModalContent>
                       {(onClose) => (
                         <>
-                          <iframe src="resume.pdf" width="100%" height="600px"></iframe>
-                          
+                          <iframe
+                            src="resume.pdf"
+                            width="100%"
+                            height="600px"
+                          ></iframe>
+
                           <ModalFooter>
-                            
                             <Button color="danger" onPress={onClose}>
                               Close
                             </Button>
@@ -212,7 +218,7 @@ function LandingPage() {
                 </p>
                 <div className=" pt-44 flex justify-end text-black ">
                   <a href="#projects">
-                    <Button 
+                    <Button
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 ml-2"
                     >
@@ -223,7 +229,7 @@ function LandingPage() {
                     href="https://drive.google.com/file/d/1KVQcskdahqOV_ztWYgjX_61Dst7wOhoK/view?usp=sharing"
                     target="_blank"
                   >
-                    <Button  
+                    <Button
                       variant="ghost"
                       className="bg-colorThree rounded-md px-8 ml-2"
                     >
@@ -340,135 +346,108 @@ function LandingPage() {
         </h1>
         <div className="max-h-[90%] w-full md:px-12 py-2">
           <ul className="grid md:grid-cols-3 grid-cols-1">
-          <li className=" w-full ">
-              <div className="bg-colorTen m-8 rounded-xl">
-                <div className="flex justify-center w-full pt-2">
-                  <Card
-                    isFooterBlurred
-                    radius="lg"
-                    className="border-none  h-96 w-72"
-                  >
-                    <Image
-                      alt="FairShare cover image"
-                      className="object-fill h-96 w-72 rounded-lg"
-                      // height={200}
-                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732519058/Mannual%20uploads/w8j5lwja4qcj2f3rfj0c.png"
-                      // width={200}
-                    />
-                    <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny text-white/80">FairShare</p>
-                      <a
-                        href="https://fairsharebyanil.netlify.app/"
-                        target="blank"
-                      >
-                        <Button
-                          className="text-tiny text-white bg-black/20 rounded-lg"
-                          variant="flat"
-                          color="default"
-                          radius="lg"
-                          size="lg"
-                        >
-                          View
-                        </Button>
-                      </a>
-                    </CardFooter>
-                  </Card>
+            <li className=" w-full ">
+              <div
+                className="bg-colorTen m-8 rounded-xl relative overflow-hidden "
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+              >
+                {/* Animated Footer */}
+                <div
+                  className={`absolute bottom-0 w-full h-20 transition-transform duration-500 ease-in-out ${
+                    isHover ? "translate-y-0" : "translate-y-full"
+                  } bg-black/90 py-2 px-4 flex justify-between items-center`}
+                >
+                  <p className="text-lg font-bold text-white/80">FairShare</p>
+                  <a href="https://fairsharebyanil.netlify.app/" target="blank">
+                    <Button
+                      className="text-sm text-white bg-black/20 rounded-lg"
+                      variant="ghost"
+                      color="warning"
+                      radius="lg"
+                      size="lg"
+                    >
+                      View website
+                    </Button>
+                  </a>
                 </div>
-                <p className="text-sm text-center mt-4 px-4 pb-2 bg-black opacity-50 text-white">
-                  <span className="font-bold text-xl">FairShare</span> is a web app designed to help users manage shared expenses within groups. It allows users to create groups, input expenses, and automatically calculate and distribute costs fairly among members. The platform promotes financial transparency and simplifies the process of managing group finances, making it easy to track and settle expenses.
-                </p>
+
+                {/* iFrame Section */}
+                <iframe
+                  src="https://fairsharebyanil.netlify.app/"
+                  frameBorder="0"
+                  className="w-full h-[34rem] scrollbar-hide z-10"
+                ></iframe>
               </div>
             </li>
             <li className=" w-full ">
-              <div className="bg-colorTen m-8 rounded-xl">
-                <div className="flex justify-center w-full pt-2">
-                  <Card
-                    isFooterBlurred
-                    radius="lg"
-                    className="border-none  h-96 w-72"
-                  >
-                    <Image
-                      alt="Woman listing to music"
-                      className="object-fill h-96 w-72 rounded-lg"
-                      // height={200}
-                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732518603/Mannual%20uploads/iioy2kcwqulkllrnyvte.png"
-                      // width={200}
-                    />
-                    <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny text-white/80">TrailTube</p>
-                      <a
-                        href="https://trailtubeapp.netlify.app/"
-                        target="blank"
-                      >
-                        <Button
-                          className="text-tiny text-white bg-black/20 rounded-lg"
-                          variant="flat"
-                          color="default"
-                          radius="lg"
-                          size="lg"
-                        >
-                          View
-                        </Button>
-                      </a>
-                    </CardFooter>
-                  </Card>
+              <div
+                className="bg-colorTen m-8 rounded-xl relative overflow-hidden"
+                onMouseEnter={() => setIsHover2(true)}
+                onMouseLeave={() => setIsHover2(false)}
+              >
+                {/* Animated Div */}
+                <div
+                  className={`absolute bottom-0 w-full h-20 transition-transform duration-500 ease-in-out ${
+                    isHover2 ? "translate-y-0" : "translate-y-full"
+                  } bg-black/90 py-2 px-4 flex justify-between items-center`}
+                >
+                  <p className="text-lg font-bold text-white/80">TrailTube</p>
+                  <a href="https://trailtubeapp.netlify.app/" target="blank">
+                    <Button
+                      className="text-sm text-white bg-black/20 rounded-lg"
+                      variant="ghost"
+                      color="warning"
+                      radius="lg"
+                      size="lg"
+                    >
+                      View website
+                    </Button>
+                  </a>
                 </div>
-                <p className="text-sm text-center mt-4 px-4 pb-2 bg-black opacity-50 text-white">
-                  <span className="font-bold text-xl">TrailTube</span> is an
-                  innovative video streaming platform . TrailTube supports video
-                  uploads, allows users to like and interact with videos, and
-                  provides a responsive interface designed with ReactJS and
-                  Tailwind CSS. With a robust backend powered by Express and
-                  MongoDB, TrailTube ensures smooth and efficient video
-                  streaming for all users.
-                </p>
+
+                {/* iFrame Section */}
+                <iframe
+                  src="https://trailtubeapp.netlify.app/"
+                  frameBorder="0"
+                  className="w-full h-[34rem] scrollbar-hide z-10"
+                ></iframe>
               </div>
             </li>
             <li className=" w-full ">
-              <div className="bg-colorTen m-8 rounded-xl">
-                <div className="flex justify-center w-full pt-2">
-                  <Card
-                    isFooterBlurred
-                    radius="lg"
-                    className="border-none  h-96 w-72"
-                  >
-                    <Image
-                      alt="Woman listing to music"
-                      className="object-fill h-96 w-72 rounded-lg"
-                      // height={200}
-                      src="https://res.cloudinary.com/anilpancloud123/image/upload/v1732519117/Mannual%20uploads/b0p8s6fpmiwdwwfx8eey.png"
-                      // width={200}
-                    />
-                    <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                      <p className="text-tiny text-white/80">Time Tracer</p>
-                      <a
-                        href="https://timetraceranil.netlify.app/"
-                        target="blank"
-                      >
-                        <Button
-                          className="text-tiny text-white bg-black/20 rounded-lg"
-                          variant="flat"
-                          color="default"
-                          radius="lg"
-                          size="lg"
-                        >
-                          View
-                        </Button>
-                      </a>
-                    </CardFooter>
-                  </Card>
+              <div
+                className="bg-colorTen m-8 rounded-xl relative overflow-hidden"
+                onMouseEnter={() => setIsHover3(true)}
+                onMouseLeave={() => setIsHover3(false)}
+              >
+                {/* Animated Div */}
+                <div
+                  className={`absolute bottom-0 w-full h-20 transition-transform duration-500 ease-in-out ${
+                    isHover3 ? "translate-y-0" : "translate-y-full"
+                  } bg-black/90 py-2 px-4 flex justify-between items-center`}
+                >
+                  <p className="text-lg font-bold text-white/80">Time Tracer</p>
+                  <a href="https://timetraceranil.netlify.app/" target="blank">
+                    <Button
+                      className="text-sm text-white bg-black/20 rounded-lg"
+                      variant="ghost"
+                      color="warning"
+                      radius="lg"
+                      size="lg"
+                    >
+                      View website
+                    </Button>
+                  </a>
                 </div>
-                <p className="text-sm text-center mt-4 px-4 pb-2 bg-black opacity-50 text-white">
-                  <span className="font-bold text-xl">Time Tracer</span> is a
-                  feature-rich web application built using the MERN stack,
-                  designed to help users monitor and manage their daily routines
-                  and activities effectively. It tracks time spent on various
-                  tasks and generates detailed summaries, offering valuable
-                  insights into productivity patterns and time management.
-                </p>
+
+                {/* iFrame Section */}
+                <iframe
+                  src="https://timetraceranil.netlify.app/"
+                  frameBorder="0"
+                  className="w-full h-[34rem] scrollbar-hide z-10"
+                ></iframe>
               </div>
             </li>
-            
           </ul>
         </div>
       </div>
@@ -563,6 +542,8 @@ function LandingPage() {
         </div>
       </div>
 
+    
+      
     </>
   );
 }
